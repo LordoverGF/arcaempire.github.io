@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Team | Arca Empire</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+    <!-- Opsional kalau pakai PNG -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/teams/arca.jpeg">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/teams/arca.jpeg">
+</head>
+<body>
+
+<header class="topbar">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <div class="brand-logo">
+            <img
+              src="assets/img//teams/arca.jpeg"
+              alt="Arca Empire Logo"
+              onerror="this.style.display = 'none'"
+            />
+          </div>
+          <div>
+            <h1>ARCA EMPIRE</h1>
+            <small>Solid • Kekeluargaan • Santai tapi Kompetitif</small>
+          </div>
+        </a>
+
+        <nav class="menu">
+          <a href="index.html">Beranda</a>
+          <a href="teams.html">Team</a>
+          <a href="roster.html">Roster</a>
+          <a href="kepengurusan.html">Kepengurusan</a>
+        </nav>
+
+        <!-- Ganti tombol Lihat Roster -> IG & YouTube -->
+        <div class="social-actions">
+          <a
+            class="btn btn-primary btn-icon"
+            href="https://instagram.com/arca.esports"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram Arca Empire"
+          >
+            <svg
+              class="sicon"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <rect
+                x="3"
+                y="3"
+                width="18"
+                height="18"
+                rx="5"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="4"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+            </svg>
+            <span>Instagram</span>
+          </a>
+
+          <a
+            class="btn btn-icon"
+            href="https://www.youtube.com/@FaizalMiracleeChannel"
+            target="_blank"
+            rel="noopener"
+            aria-label="YouTube Arca Empire"
+          >
+            <svg
+              class="sicon"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M22 12s0-3.2-.4-4.7a3 3 0 0 0-2.1-2.1C18 4.8 12 4.8 12 4.8s-6 0-7.5.4a3 3 0 0 0-2.1 2.1C2 8.8 2 12 2 12s0 3.2.4 4.7a3 3 0 0 0 2.1 2.1c1.5.4 7.5.4 7.5.4s6 0 7.5-.4a3 3 0 0 0 2.1-2.1C22 15.2 22 12 22 12Z"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path d="M10 9.5v5l5-2.5-5-2.5Z" fill="currentColor" />
+            </svg>
+            <span>YouTube</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+<main class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2>Team Arca Empire</h2>
+        <p class="desc">Klik salah satu team untuk melihat daftar player lengkap dengan foto.</p>
+      </div>
+    </div>
+
+    <!-- LIST TEAM -->
+    <section id="teamList" class="team-list"></section>
+
+    <!-- DETAIL TEAM (PLAYER) -->
+    <section id="teamDetail" class="team-detail" style="display:none; margin-top:18px;">
+      <div class="section-head">
+        <div>
+          <h2 id="teamTitle">Team</h2>
+          <p id="teamDesc" class="desc"></p>
+        </div>
+        <button id="btnBackTeams" class="btn btn-ghost" type="button">← Kembali ke list team</button>
+      </div>
+
+      <div class="roster-tools" id="teamChips">
+        <div class="chip active" data-role="All">Semua</div>
+        <div class="chip" data-role="Roamer">Roamer</div>
+        <div class="chip" data-role="Jungler">Jungler</div>
+        <div class="chip" data-role="Midlaner">Midlaner</div>
+        <div class="chip" data-role="Explaner">Explaner</div>
+        <div class="chip" data-role="Goldlaner">Goldlaner</div>
+      </div>
+
+      <section class="grid-roster" id="teamPlayerGrid"></section>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container foot">
+    <div class="small">© <span id="year"></span> Arca Empire</div>
+    <div class="small">Klik foto untuk memperbesar</div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <img id="lightboxImg" alt="Preview">
+  <div class="hint">Klik di mana saja / tekan ESC untuk tutup</div>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
